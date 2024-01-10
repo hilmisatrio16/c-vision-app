@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.capstoneproject.cvision.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_creditsActivity"
+            app:destination="@id/creditsActivity" />
+        <action
+            android:id="@+id/action_profileFragment_to_aboutActivity"
+            app:destination="@id/aboutActivity" />
+        <action
+            android:id="@+id/action_profileFragment_to_loginActivity"
+            app:destination="@id/loginActivity"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.capstoneproject.cvision.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_articleActivity"
+            app:destination="@id/articleActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailArticleActivity"
+            app:destination="@id/detailArticleActivity" />
+        <action
+            android:id="@+id/action_homeFragment_to_detectionActivity"
+            app:destination="@id/detectionActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/articleActivity"
+        android:name="com.capstoneproject.cvision.ui.article.ArticleActivity"
+        android:label="activity_article"
+        tools:layout="@layout/activity_article" />
+    <activity
+        android:id="@+id/creditsActivity"
+        android:name="com.capstoneproject.cvision.ui.profile.CreditsActivity"
+        android:label="activity_credits"
+        tools:layout="@layout/activity_credits" />
+    <activity
+        android:id="@+id/aboutActivity"
+        android:name="com.capstoneproject.cvision.ui.profile.AboutActivity"
+        android:label="activity_about"
+        tools:layout="@layout/activity_about" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.capstoneproject.cvision.ui.login.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/detailArticleActivity"
+        android:name="com.capstoneproject.cvision.ui.article.DetailArticleActivity"
+        android:label="activity_detail_article"
+        tools:layout="@layout/activity_detail_article" />
+    <activity
+        android:id="@+id/detectionActivity"
+        android:name="com.capstoneproject.cvision.ui.diagnose.DetectionActivity"
+        android:label="activity_detection"
+        tools:layout="@layout/activity_detection" />
+</navigation>

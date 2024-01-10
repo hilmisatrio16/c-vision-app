@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.onboarding.OnboardingFirstActivity">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_banner"
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:scaleType="centerCrop"
+        android:elevation="2dp"
+        android:alpha="0"
+        android:src="@drawable/image_onboarding_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeImageAppearanceOverlay" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:alpha="0"
+        android:fontFamily="@font/fugazone_regular"
+        android:text="@string/onboarding_greeting"
+        android:textColor="#31304D"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_banner" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="28dp"
+        android:alpha="0"
+        android:fontFamily="@font/poppins_light"
+        android:maxWidth="300dp"
+        android:text="@string/tagline_onboarding"
+        android:textAlignment="center"
+        android:textColor="#31304D"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_greeting"
+        app:layout_constraintStart_toStartOf="@+id/tv_greeting"
+        app:layout_constraintTop_toBottomOf="@+id/tv_greeting" />
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="28dp"
+        android:alpha="0"
+        android:fontFamily="@font/poppins_medium"
+        android:minWidth="160dp"
+        android:minHeight="54dp"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:backgroundTint="#83A2FF"
+        app:icon="@drawable/arrow_forward"
+        app:iconGravity="end"
+        app:iconSize="24dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small" />
+</androidx.constraintlayout.widget.ConstraintLayout>
